@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="opConsoleApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Operator Console 1.0</title>
+
+    <!--- css style area -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/introloader/dist/css/introLoader.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/themes/base/jquery-ui.css">
+
+
+    <!--font awesome icon -->
+    <!-- animation -->
+
+    <!--font  icon -->
+
+
+    <!--  Theme Style -->
+    <!-- Font Awesome -->
+    <link href="assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- jQuery custom content scroller -->
+    <link href="assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+
+    <!-- Custom Theme Style -->
+    <link rel="stylesheet" href="assets/build/css/custom.css">
+    <!-- jquery UI -->
+
+    <!-- themify fonts -->
+    <link href="assets/fonts/themify/themify-icons.css" rel="stylesheet"/>
+
+    <!-- notification JS plug -->
+    <link href="bower_components/ng-notify/dist/ng-notify.min.css" rel="stylesheet"/>
+
+    <!-- smart wizard js plugin -->
+    <link href="assets/vendors/jQuery-Smart-Wizard/styles/smart_wizard.css" rel="stylesheet"/>
+
+
+    <!-- ng-sortable -->
+    <link rel="stylesheet" type="text/css" href="bower_components/ng-sortable/dist/ng-sortable.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/ng-sortable/dist/ng-sortable.style.min.css">
+
+    <!-- sweet alert -->
+    <link rel="stylesheet" type="text/css" href="bower_components/ngSweetAlert/">
+
+    <!-- ngTagsInput -->
+    <link rel="stylesheet" type="text/css" href="bower_components/ng-tags-input/ng-tags-input.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/ng-tags-input/ng-tags-input.bootstrap.min.css">
+
+    <!-- confirmation box -->
+    <link rel="stylesheet" href="bower_components/angular-confirm/css/angular-confirm.css"/>
+
+
+    <!-- angular UI-grid -->
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-ui-grid/ui-grid.min.css">
+
+    <!-- customer css -->
+    <link rel="stylesheet" href="assets/css/op-console1.css"/>
+    <link rel="stylesheet" href="assets/css/element-animation.css"/>
+    <link rel="stylesheet" href="assets/css/sign-in.css"/>
+    <link rel="stylesheet" href="assets/css/animate.css"/>
+
+    <link rel="stylesheet" href="bower_components/angular-gantt/dist/angular-gantt.css"/>
+
+    <link rel="stylesheet" href="assets/css/vertical-tabs.css"/>
+</head>
+
+<body class="nav-md">
+
+<!-- main view app -->
+<div id="mainViewPoint" ui-view>
+
+</div>
+
+
+<!-- vendor JS -->
+<!-- jQuery -->
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+
+
+<!-- Bootstrap -->
+<script type="text/javascript" src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<!-- jQuery custom content scroller -->
+<script src="assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script type="text/javascript" src="assets/build/js/custom.js"></script>
+
+<!-- PNotify -->
+<script type="text/javascript" src="assets/vendors/pnotify/dist/pnotify.js"></script>
+<script type="text/javascript" src="assets/vendors/pnotify/dist/pnotify.buttons.js"></script>
+<script type="text/javascript" src="assets/vendors/pnotify/dist/pnotify.nonblock.js"></script>
+<script type="text/javascript" src="assets/vendors/pnotify/dist/pnotify.confirm.js"></script>
+
+<!-- smart wizard js plugin -->
+<script type="text/javascript" src="assets/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+
+
+<!-- animation -->
+
+
+<!-- PLUGIN (with helper plugins included) -->
+<!--<script type="text/javascript" src="bower_components/introloader/dist/jquery.introLoader.pack.min.js"></script>-->
+<script type="text/javascript" src="assets/js/utility.js"></script>
+
+
+<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.js"></script>
+<script type="text/javascript" src="bower_components/jquery-ui/ui/effect.js"></script>
+
+
+<!-- angular version -->
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
+
+<script type="text/javascript" src="bower_components/moment/moment.js"></script>
+
+
+<!-- angular slimscroll -->
+<script type="text/javascript" src="bower_components/angular-slimscroll/angular-slimscroll.js"></script>
+
+<!-- jquery scroll -->
+<script type="text/javascript" src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="bower_components/slimScroll/jquery.slimscroll.js"></script>
+
+<!-- anuglar scroll -->
+
+<!-- confirm box -->
+<script type="text/javascript" src="bower_components/angular-confirm/js/angular-confirm.js"></script>
+
+<!-- sweet alert -->
+<script type="text/javascript" src="bower_components/ngSweetAlert/SweetAlert.js"></script>
+<script type="text/javascript" src="bower_components/ngSweetAlert/SweetAlert.min.js"></script>
+
+
+<!-- Lodash -->
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+
+
+<!-- #### don't use jquery lib
+   notification JS plug -->
+<script type="text/javascript" src="bower_components/ng-notify/dist/ng-notify.min.js"></script>
+
+<!-- components -->
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<!--Easy pie chart -->
+<script type="text/javascript" src="bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.js"></script>
+
+<!-- angular-jwt -->
+<script type="text/javascript" src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+<script type="text/javascript" src="bower_components/satellizer/dist/satellizer.js"></script>
+
+<!-- angular local storage --->
+<script type="text/javascript" src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+
+<!-- base 64 -->
+<script type="text/javascript" src="bower_components/angular-base64/angular-base64.js"></script>
+
+<script type="text/javascript" src="bower_components/ng-sortable/dist/ng-sortable.min.js"></script>
+<!-- check-list -->
+<script type="text/javascript" src="bower_components/checklist-model/checklist-model.js"></script>
+
+<!-- ngTagsInput -->
+<script type="text/javascript" src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+
+
+<!-- main file app.js -->
+<script type="text/javascript" src="app.js"></script>
+
+<!-- factory -->
+
+<!-- ####services#### -->
+<!--auth services-->
+<script type="text/javascript" src="app/auth/app/services/oAuthServices.js"></script>
+<script type="text/javascript" src="app/services/authService.js"></script>
+<script type="text/javascript" src="app/services/companyInfoServices.js"></script>
+
+
+<!-- user profile -->
+<script type="text/javascript" src="app/services/user/userProfileServices.js"></script>
+<script type="text/javascript" src="app/services/dashboardServices.js"></script>
+
+<!-- monitor rest api -->
+<script type="text/javascript" src="app/services/monitorrestapi/monitorRestApi.js"></script>
+
+<!--####directive####-->
+<script type="text/javascript" src="app/directive/serverPerformance/serverPerformanceDirective.js"></script>
+
+
+<!-- controller -->
+<script type="text/javascript" src="app/controller/consoleCtrl.js"></script>
+<script type="text/javascript" src="app/controller/monitorServerPctrl.js"></script>
+<script type="text/javascript" src="app/controller/codec-management/codecManagementCtrl.js"></script>
+<script type="text/javascript" src="app/controller/company/companyInfoCtrl.js"></script>
+<script type="text/javascript" src="app/controller/company/companySummaryCtrl.js"></script>
+<!--<script type="text/javascript" src="app/controller/companyInfoCtrl.js"></script>-->
+
+<!-- trunk configurations -->
+<script type="text/javascript" src="app/services/cluster-configuration/clusterConfigurationService.js"></script>
+<script type="text/javascript" src="app/services/phonenumber-trunk-service/phoneNumberTrunkService.js"></script>
+<script type="text/javascript" src="app/services/rule-service/ruleService.js"></script>
+<script type="text/javascript" src="app/controller/trunk-configuration/trunkConfigurationCtrl.js"></script>
+
+
+<!-- auth -->
+<script type="text/javascript" src="app/auth/app/controller/loginCtrl.js"></script>
+
+<!-- package -->
+<script type="text/javascript" src="app/controller/package/packageController.js"></script>
+<script type="text/javascript" src="app/services/package/userService.js"></script>
+
+<!-- codec management -->
+<script type="text/javascript" src="app/services/sip-user/sipUserService.js"></script>
+<script type="text/javascript" src="app/controller/codec-management/codecManagementCtrl.js"></script>
+
+<!-- unit -->
+<script type="text/javascript" src="app/controller/package/unitController.js"></script>
+
+<!-- create Company -->
+<script type="text/javascript" src="app/controller/company/createCompanyController.js"></script>
+
+<!-- Notifications  -->
+<script type="text/javascript" src="bower_components/angular-socket-io/socket.js"></script>
+<script type="text/javascript" src="bower_components/socket.io-client/dist/socket.io.js"></script>
+<script type="text/javascript" src="assets/js/veery.chat.client.api.js"></script>
+<script type="text/javascript" src="app/services/subscribe/subscribeServices.js"></script>
+
+<!-- Account Activation  -->
+<script type="text/javascript" src="app/services/billingservice/billingservice.js"></script>
+
+<!-- Voxbone Number Configuration  -->
+<script type="text/javascript" src="app/services/voxbone/voxboneApi.js"></script>
+<script type="text/javascript" src="app/controller/voxbone-number-config/voxboneNumberConfig.js"></script>
+
+<!--reports -->
+<script type="text/javascript" src="app/controller/reports/agentProductivityController.js"></script>
+<script type="text/javascript" src="app/controller/reports/agentStatusEventController.js"></script>
+<script type="text/javascript" src="app/services/productivity/resourceProductivityService.js"></script>
+
+
+<!--- angular UI-grid -->
+<script type="text/javascript" src="bower_components/angular-ui-grid/ui-grid.js"></script>
+
+<!--'ui.select', 'ngSanitize'-->
+<script type="text/javascript" src="bower_components/angular-ui-select/dist/select.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css"/>
+
+
+<!-- json to csv -->
+<script type="text/javascript" src="bower_components/ng-csv/build/ng-csv.js"></script>
+<!-- json to csv -->
+
+<!--Reports-->
+<script type="text/javascript" src="app/services/Reports/cdrApiHandler.js"></script>
+<script type="text/javascript" src="app/services/Reports/companyConfigService.js"></script>
+<script type="text/javascript" src="app/directive/Reports/statusgantt.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js "></script>
+<script type="text/javascript" src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-gantt/dist/angular-gantt.js"></script>
+
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/angular-moment/angular-moment.js"></script>
+<script src="bower_components/angular-moment-picker/dist/angular-moment-picker.js"></script>
+
+
+
+
+</body>
+</html>

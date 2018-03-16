@@ -1,0 +1,309 @@
+<div class="nav-md" ng-controller="consoleCtrl">
+    <div style="width: 100%;padding: 0" class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col menu_fixed">
+                <div class="left_col blur-this scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="#/op-console" class="site_title">
+                            <span>Operator Console</span></a>
+                        <!--<i class="fa fa-paw"></i>-->
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img ng-src="{{CurrentProfile.avatar}}"
+                                 src="assets/img/profileAvatar.png"
+                                 alt="assets." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>{{CurrentProfile.firstname}}</h2>
+                            <div class="logout-btn-wrp">
+                                <button ng-if="!isLogingOut"
+                                        ng-click="logOut();"
+                                        class="btn btn-sm btn-green-sm ">
+                                    LOG OUT
+                                </button>
+                                <button ng-if="isLogingOut"
+                                        class="btn btn-sm btn-green-sm ">
+                                    Please wait..
+                                </button>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback">
+                                <input type="text" class="form-control has-feedback-left" id="inputSuccess2"
+                                       ng-model="vToken" placeholder="Key">
+                                <span class="fa fa-user form-control-feedback left"
+                                      aria-hidden="true"></span>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 form-group has-feedback">
+                                <button ng-click="validateToken(vToken);" class="btn btn-success">Activate</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <br/>
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <!--<h3>General</h3>-->
+                            <ul class="nav side-menu">
+                                <li><a href="javascript:void(0);"
+                                       ng-click="goToNavigation('serverPerformance')"><i>
+                                    <img src="assets/img/ui-icon-1/chat.svg" width="20px"/>
+                                </i> Server Monitor</a>
+
+                                </li>
+                                <!--<li><a><i class="ti-home"></i> Home <span class="fa fa-chevron-down"></span></a>-->
+                                <!--<ul class="nav child_menu">-->
+                                <!--<li><a href="index.html">Dashboard</a></li>-->
+                                <!--<li><a href="index2.html">Dashboard2</a></li>-->
+                                <!--<li><a href="index3.html">Dashboard3</a></li>-->
+                                <!--</ul>-->
+                                <!--</li>-->
+
+                                <!--<li><a href="javascript:void(0);"-->
+                                <!--ng-click="goToNavigation('companyInfo')"><i>-->
+                                <!--<img src="assets/img/ui-icon-1/letters.svg" width="20px"/>-->
+                                <!--</i> Company Info</a>-->
+                                <!--</li>-->
+
+
+                                <!-- company -->
+                                <li>
+                                    <a ng-click="goToNavigation('companyInfo')">
+                                        <i>
+                                            <img src="assets/img/ui-icon-1/letters.svg" width="20px"/>
+                                        </i> Company Infomation</a>
+                                    <!--<ul class="nav child_menu">-->
+                                    <!--<li><a ng-click="goToNavigation('createCompany')"-->
+                                    <!--href="javascript:void(0);">Create New</a>-->
+                                    <!--</li>-->
+                                    <!--<li><a ng-click="goToNavigation('companyInfo')"-->
+                                    <!--href="javascript:void(0);">Infomation</a>-->
+                                    <!--</li>-->
+                                    <!--</ul>-->
+                                </li>
+
+                                <li><a>
+
+                                    <i>
+                                        <img src="assets/img/ui-icon-1/files-1.svg" width="20px"/>
+                                    </i> Package & Unit <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a ng-click="goToNavigation('package')"
+                                               href="javascript:void(0);">Package</a>
+                                        </li>
+                                        <li><a ng-click="goToNavigation('unit')"
+                                               href="javascript:void(0);">Unit</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                                <!--<li><a>-->
+
+                                <!--<i>-->
+                                <!--<img src="assets/img/ui-icon-2/stats.svg" width="20px"/>-->
+                                <!--</i> Dashboard <span class="fa fa-chevron-down"></span></a>-->
+
+                                <!--<ul class="nav child_menu">-->
+                                <!--<li><a href="index.html">Dashboard</a></li>-->
+                                <!--<li><a href="index2.html">Dashboard2</a></li>-->
+                                <!--<li><a href="index3.html">Dashboard3</a></li>-->
+                                <!--</ul>-->
+                                <!--</li>-->
+
+                                <li>
+                                    <a href="javascript:void(0);" ng-click="goToNavigation('codecManagement')"><i> <img
+                                            src="assets/img/ui-icon-1/music.svg" width="20px"/></i> Codec Management</a>
+                                </li>
+
+                                <li><a href="javascript:void(0);"
+                                       ng-click="goToNavigation('trunkConfiguration')"><i>
+                                    <img src="assets/img/ui-icon-1/shield.svg" width="20px"/>
+                                </i> Trunk Configuration</a>
+                                </li>
+
+                                <li><a href="javascript:void(0);"
+                                       ng-click="goToNavigation('voxboneNumberConfiguration')"><i>
+                                    <img src="assets/img/ui-icon-1/shield.svg" width="20px"/>
+                                </i> Voxbone Numbers</a>
+                                </li>
+
+
+                                <li>
+                                    <a><i><img src="assets/img/ui-icon-1/files-1.svg" width="20px"/></i> Reports
+                                        <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li>
+                                            <a ng-click="goToNavigation('agentProductivity')"
+                                               href="javascript:void(0);">Agent Productivity</a>
+                                        </li>
+                                        <li>
+                                            <a ng-click="goToNavigation('agentSummery')" href="javascript:void(0);">Agent
+                                                Summery</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    <!-- /menu footer buttons -->
+                    <!--<div class="sidebar-footer hidden-small">-->
+                    <!--<a data-toggle="tooltip" data-placement="top" title="Settings">-->
+                    <!--<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>-->
+                    <!--</a>-->
+                    <!--<a data-toggle="tooltip" data-placement="top" title="FullScreen">-->
+                    <!--<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>-->
+                    <!--</a>-->
+                    <!--<a data-toggle="tooltip" data-placement="top" title="Lock">-->
+                    <!--<span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>-->
+                    <!--</a>-->
+                    <!--<a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">-->
+                    <!--<span class="glyphicon glyphicon-off" aria-hidden="true"></span>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav blur-this">
+                <div class="nav_menu" id="topNav">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <!-- profile setting -->
+                            <li role="presentation" class="dropdown"
+                                uib-dropdown
+                                uib-dropdown-toggle>
+                                <a href="javascript:void(0);" class="dropdown-toggle info-number" data-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <i class="fa ti-settings"></i>
+                                    <!--<span class="badge bg-green">6</span>-->
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right"
+                                    uib-dropdown-menu
+                                    role="menu">
+                                    <li class="notification-header">
+                                        <a class="drop-header"></a>
+                                        <span class="drop-sub-header"></span>
+                                    </li>
+                                    <li class="divider"></li>
+
+                                </ul>
+                            </li>
+
+                            <!-- notification -->
+                            <li role="presentation" class="dropdown"
+                                uib-dropdown
+                                uib-dropdown-toggle>
+                                <a href="javascript:void(0);" class="dropdown-toggle info-number"
+                                   data-toggle="dropdown"
+                                   ng-click="checkAndRegister()" aria-expanded="false">
+                                    <i class="fa ti-bell"></i>
+                                    <span class="badge bg-green">{{unredNotifications}}</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right"
+                                    uib-dropdown-menu
+                                    role="menu">
+                                    <li class="notification-header">
+                                        <a class="drop-header">Notification
+                                            center</a>
+                                        <span class="drop-sub-header">new ({{unredNotifications}})</span>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <div class="console-notofication-wrapper">
+                                        <div class="notification-status" ng-show="unredNotifications==0">
+
+                                            <i class="animated   veery-font-1-alarm"> </i>
+                                            </br>
+                                            no new notification
+                                        </div>
+
+                                        <section slimscroll="{height: '300px',
+                                    railVisible: true,
+                                    color: '#B6B8B5',
+                                    size: '8px',
+                                    distance: '10px',
+                                    railColor: '#B6B8B5',
+                                    railBorderRadius: 10}">
+
+                                            <div class="notification-list" ng-repeat="notifi in notifications"
+                                                 ng-click="showNotificationMessage(notifi)">
+                                                <div class="notify-img-small">
+                                                    <img src="assets/img/avatar/profileAvatar.png"
+                                                         ng-src="{{notifi.avatar}}">
+                                                </div>
+                                                <div class="noti-detail">
+                                                    <div class="noti-detail">
+                                                        <h5>{{notifi.From}}</h5>
+                                                        <h4>{{notifi.Message | limitTo: 20}}{{notifi.Message.length>20
+                                                            ?'....':''}}</h4>
+
+                                                        <div>
+                                                            <time-ago from-time='{{notifi.resv_time}}'
+                                                                      format='MM/dd/yyyy'></time-ago>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col " role="main">
+                <div ui-view></div>
+
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content -->
+            <!--<footer>-->
+            <!--<div class="pull-right">-->
+            <!--Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>-->
+            <!--</div>-->
+            <!--<div class="clearfix"></div>-->
+            <!--</footer>-->
+            <!-- /footer content -->
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="assets/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <!--<script src="assets/vendors/nprogress/nprogress.js"></script>-->
+    <!-- jQuery custom content scroller -->
+    <script src="assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="assets/build/js/custom.min.js"></script>
+</div>
